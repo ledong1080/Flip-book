@@ -73,12 +73,10 @@ body {
     color: #d14f8a;
     text-transform: uppercase;
     text-shadow: 
-        /* White outline */
         -1px -1px 0 #fff,
          1px -1px 0 #fff,
         -1px  1px 0 #fff,
          1px  1px 0 #fff,
-        /* Original glow effects */
         0 0 7px rgba(255, 255, 255, 0.7),
         0 0 10px rgba(209, 79, 138, 0.5),
         2px 2px 4px rgba(0,0,0,0.2);
@@ -184,7 +182,6 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    /* Dark spine with stylized white horizontal lines */
     background-color: #CCCCCC;
     background-image: repeating-linear-gradient(
         to bottom,
@@ -193,7 +190,7 @@ body {
         transparent 15px,
         transparent 40px
     );
-    background-position: 0 20px; /* Start lines after a small gap from top */
+    background-position: 0 20px;
     box-shadow: 
         inset 3px 0 5px rgba(0, 0, 0, 0.5), 
         1px 0 2px rgba(0, 0, 0, 0.2);
@@ -255,9 +252,7 @@ body {
     box-shadow: none;
 }
 
-/* ===========================================================
-   🔊 SOUND VISUALIZER (NEON PINK - NEXT TOP MODEL STYLE)
-   =========================================================== */
+/* ===================== SOUND VISUALIZER ===================== */
 #sound-visualizer {
     position: fixed;
     bottom: 35px;
@@ -265,11 +260,9 @@ body {
     transform: translateX(-50%);
     width: 220px;
     height: 50px;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
     pointer-events: none;
     z-index: 9990;
 }
@@ -278,44 +271,9 @@ body {
     width: 10px;
     height: 8px;
     background: var(--pink-neon);
-
     border-radius: 4px;
-    box-shadow:
-        0 0 8px var(--pink-neon),
-        0 0 15px var(--pink-soft);
-
-    transition: height 0.08s ease-out;
-}
-/* === SOUND BAR HAI BÊN === */
-
-.sound-visualizer {
-    position: fixed;
-    top: 50%;
-    width: 18px;
-    height: 120px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 9999;
-}
-
-#sound-left {
-    left: 15px;
-}
-
-#sound-right {
-    right: 15px;
-}
-
-.sound-visualizer .bar {
-    width: 100%;
-    height: 12px;
-    background: var(--pink-neon);
-    border-radius: 4px;
-    opacity: 0.9;
-    transition: height 0.15s linear;
     box-shadow: 0 0 8px var(--pink-neon), 0 0 15px var(--pink-soft);
+    transition: height 0.08s ease-out;
 }
 
 /* ===================== VOLUME SLIDER ===================== */
@@ -325,7 +283,7 @@ body {
     left: 15px;
     display: flex;
     align-items: center;
-    z-index: 9990; /* Below cursor, above most elements */
+    z-index: 9990;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 6px 12px;
     border-radius: 50px;
@@ -357,7 +315,7 @@ body {
     appearance: none;
     width: 70px;
     height: 6px;
-    background: rgba(255, 80, 170, 0.3); /* Soft pink track */
+    background: rgba(255, 80, 170, 0.3);
     border-radius: 5px;
     outline: none;
     transition: opacity 0.2s;
@@ -374,7 +332,7 @@ body {
     border: 2px solid white;
     box-shadow: 0 0 8px var(--pink-neon), 0 0 15px var(--pink-soft);
     cursor: pointer;
-    margin-top: -5px; /* Center thumb on track */
+    margin-top: -5px;
 }
 
 #volume-slider::-moz-range-thumb {
